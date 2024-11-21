@@ -1,13 +1,23 @@
+"use client";
+
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import Logo from "./Logo";
 
-const Navbar = () => {
+type UserProps = {
+  user?: {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+  };
+};
+
+const Navbar = ({ loggedUser }: { loggedUser: UserProps | null }) => {
   const navItems = (
     <>
       <li>
         <Link href="/">Home</Link>
       </li>
-
       <li>
         <Link href="/about">About Us</Link>
       </li>
@@ -61,16 +71,21 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-error btn-outline text-white rounded-full px-5">
-          Logout
-        </button>
-
-        <Link
-          href="/login"
-          className="btn btn-accent btn-outline text-white rounded-full px-5"
-        >
-          Login
-        </Link>
+        {loggedUser?.user ? (
+          <button
+            onClick={() => signOut()}
+            className="btn btn-error btn-outline text-white rounded-full px-5"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            href="/login"
+            className="btn btn-accent btn-outline text-white rounded-full px-5"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
