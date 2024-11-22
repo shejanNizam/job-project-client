@@ -19,16 +19,25 @@ const Navbar = ({ loggedUser }: { loggedUser: UserProps | null }) => {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/about">About Us</Link>
+        <Link href="/menus">Our menus</Link>
       </li>
       <li>
-        <Link href="/support">Support</Link>
+        <Link href="/meal">Meal</Link>
       </li>
       <li>
-        <Link href="/about">About Us</Link>
+        <Link href="/plans">Plans</Link>
       </li>
       <li>
-        <Link href="/support">Support</Link>
+        <Link href="/works">How it works</Link>
+      </li>
+      <li>
+        <Link href="/testimonials">Testimonials</Link>
+      </li>
+      <li>
+        <Link href="/catering">Catering</Link>
+      </li>
+      <li>
+        <Link href="/faq">FAQ</Link>
       </li>
       <li>
         <Link href="/dashboard">Dashboard</Link>
