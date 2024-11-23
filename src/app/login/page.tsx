@@ -21,7 +21,6 @@ const LoginPage = () => {
   const router = useRouter();
 
   const onSubmit = async (data: FormValues) => {
-    console.log(data);
     try {
       const res = await loginUser(data);
       if (res.accessToken) {
@@ -29,7 +28,6 @@ const LoginPage = () => {
         localStorage.setItem("accessToken", res.accessToken);
         router.push("/");
       }
-      console.log(res);
     } catch (err: any) {
       console.error(err.message);
       throw new Error(err.message);

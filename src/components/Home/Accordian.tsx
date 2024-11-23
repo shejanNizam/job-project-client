@@ -10,7 +10,7 @@ type PropType = {
   accordionContent: string;
 };
 
-export default function Accordian({
+export default async function Accordian({
   accordionTrigger,
   accordionContent,
 }: PropType) {
