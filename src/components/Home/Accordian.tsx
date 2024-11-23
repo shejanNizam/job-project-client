@@ -15,7 +15,7 @@ export default async function Accordian({
   accordionContent,
 }: PropType) {
   return (
-    <div className="w-[60%] mx-auto ">
+    <div className="w-[60%] mx-auto">
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger> {accordionTrigger} </AccordionTrigger>

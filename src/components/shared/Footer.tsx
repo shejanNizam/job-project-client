@@ -176,7 +176,8 @@ export default function Footer() {
           </div>
           <div className="mt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} Brandme. All rights reserved.
+              &copy; {new Date().getFullYear()} Simply Food. All rights
+              reserved.
             </p>
             <nav className="flex flex-wrap justify-center space-x-6 mt-4 md:mt-0">
               <Link
