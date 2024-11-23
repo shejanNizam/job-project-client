@@ -1,11 +1,8 @@
 import AllAccordian from "@/components/Home/AllAccordian";
 import Banner from "@/components/Home/Banner";
-import Menus from "./menus/page";
+import Menus from "./menu/page";
 
 const HomePage = () => {
-  // const res = await fetch("http://localhost:7000/menu");
-  // const menuData = await res.json();
-
   return (
     <div>
       <h1 className="text-4xl text-center mt-10">Welcome To Home Page</h1>

@@ -9,13 +9,14 @@ import {
 import getAllMenu from "@/lib/getAllMenu";
 import Image from "next/image";
 import Link from "next/link";
+import { MenuType } from "./[id]/page";
 
 export default async function Menus() {
   const menuData = await getAllMenu();
-  console.log(menuData);
+
   return (
     <div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-1  gap-4">
-      {menuData.map((menu: any) => (
+      {menuData.map((menu: MenuType) => (
         <div key={menu._id}>
           <Card className="w-auto shadow-md border">
             <CardHeader className="p-0">
@@ -34,7 +35,7 @@ export default async function Menus() {
               <p className="text-sm text-gray-600 mt-1">$49.99</p>
             </CardContent>
             <CardFooter className="p-4">
-              <Link href={`menu/${menu.id}`}>
+              <Link href={`menu/${menu._id}`}>
                 <Button className="w-full" variant="default">
                   Details
                 </Button>

@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import getMenu from "@/lib/getMenu";
 import { ChevronLeft, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-type MenuType = {
+export type MenuType = {
   _id: string;
   name: string;
   email: string;
@@ -12,13 +13,20 @@ type MenuType = {
   image: string;
 };
 
-export default function SingleMenu() {
-  // const { id } = params;
-  // const singleMenu = getMenu(id);
+export default async function SingleMenu({
+  params,
+}: {
+  params: { id: string };
+}) {
+  // console.log(params); // { id: '6741067040535c18247a7d9f' }
+  const { id } = params;
+  // console.log(id); // 6741067040535c18247a7d9f
+  const singleMenu = await getMenu(id);
+  console.log(singleMenu); // {}
 
   return (
     <>
-      {/* <div className="max-w-6xl mx-auto bg-background p-4">
+      <div className="max-w-6xl mx-auto bg-background p-4">
         <div className="flex items-center mb-4">
           <Link href="/">
             <Button variant="ghost" size="icon" className="text-primary">
@@ -32,8 +40,8 @@ export default function SingleMenu() {
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="relative rounded-lg overflow-hidden lg:w-1/2">
                 <Image
-                  src={singleMenu.image}
-                  alt="image"
+                  src={singleMenu?.image}
+                  alt="menu_image"
                   width={500}
                   height={500}
                   className="w-full h-[300px] lg:h-[400px] object-cover"
@@ -86,7 +94,7 @@ export default function SingleMenu() {
           <ShoppingCart className="h-6 w-6 text-white" />
         </Button>
             
-      </div> */}
+      </div>
     </>
   );
 }
