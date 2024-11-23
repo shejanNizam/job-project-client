@@ -1,4 +1,6 @@
 export default async function getAllMenu() {
-  const result = await fetch(`http://localhost:7000/menu`);
+  const result = await fetch(
+    `https://job-project-server-ruddy.vercel.app/menu`
+  );
   return result.json();
 }

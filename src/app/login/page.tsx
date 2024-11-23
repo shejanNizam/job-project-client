@@ -94,10 +94,11 @@ const LoginPage = () => {
             <button
               onClick={() =>
                 signIn("google", {
-                  callbackUrl: "http://localhost:3000/dashboard",
+                  callbackUrl:
+                    "https://job-project-client.vercel.app/dashboard",
                 })
               }
-              className="btn btn-circle "
+              className="btn btn-circle"
             >
               <Image
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
@@ -109,7 +110,8 @@ const LoginPage = () => {
             <button
               onClick={() =>
                 signIn("github", {
-                  callbackUrl: "http://localhost:3000/dashboard",
+                  callbackUrl:
+                    "https://job-project-client.vercel.app/dashboard",
                 })
               }
               className="btn btn-circle"

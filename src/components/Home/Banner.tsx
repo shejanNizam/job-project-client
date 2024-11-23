@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import banner_img from "@/assets/meat-sadj-vegetables-greens-spic.png";
 
 export default function Banner() {
   return (
@@ -19,7 +20,7 @@ export default function Banner() {
         </div>
         <div className="relative w-1/2 h-full ">
           <Image
-            src="https://img.freepik.com/free-photo/meat-sadj-vegetables-greens-spices-top-view_140725-11308.jpg?semt=ais_hybrid"
+            src={banner_img}
             alt="Delicious food"
             layout="responsive"
             width={500}
