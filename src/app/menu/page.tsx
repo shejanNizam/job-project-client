@@ -14,7 +14,6 @@ import { MenuType } from "./[id]/page";
 
 export default async function Menus() {
   const menuData = await getAllMenu();
-
   return (
     <>
       <h2 className="text-center text-3xl font-semibold my-8">
