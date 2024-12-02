@@ -38,7 +38,7 @@ const LoginPage = () => {
       <h1 className="text-center text-4xl mb-5">
         Login <span className="text-orange-500">Here</span>
       </h1>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-8">
         <div>
           <Image
             src="https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?t=st=1710130697~exp=1710134297~hmac=f1b21d9c1823a0657d339c256a1c4ad8301168480e35b35aeba5106568a21010&w=740"
